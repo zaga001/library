@@ -1,18 +1,20 @@
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    toggleReadStatus() {
+        this.read = !this.read;
+    }
+}
+
 const myLibrary = [
     new Book("Omniscient Reader's Viewpoint", "Sing Shong", 551, true),
     new Book("Lord of the Mysteries", "Cuttlefish That Loves Diving", 1430, true)
 ];
-
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
-
-Book.prototype.toggleReadStatus = function() {
-    this.read = !this.read;
-};
 
 function addBookToLibrary(title, author, pages, read) {
     const book = new Book(title, author, pages, read);
