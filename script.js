@@ -85,14 +85,14 @@ function removeBookFromLibrary(index) {
 const openBtn = document.querySelector('#open-modal');
 const dialog = document.querySelector('#dialog');
 const closeBtn = document.querySelector('#close-modal');
-const submit = document.querySelector('#submit');
+const form = document.querySelector('form');
 
 displayBook(myLibrary);
 
 openBtn.addEventListener('click', () => dialog.showModal());
 closeBtn.addEventListener('click', () => dialog.close());
 
-submit.addEventListener('click', (event) => {
+form.addEventListener('submit', (event) => {
     event.preventDefault();
     const title = document.querySelector('#title').value;
     const author = document.querySelector('#author').value;
@@ -100,7 +100,6 @@ submit.addEventListener('click', (event) => {
     const read = document.querySelector('input[name="read"]:checked').value === 'true';
     addBookToLibrary(title, author, pages, read);
     displayBook(myLibrary);
-    const form = document.querySelector('form');
     form.reset();
     dialog.close();
 });
