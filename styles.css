@@ -21,3 +21,15 @@ h2 {
 #open-modal {
   margin: 1em 0;
 }
+
+form h2 {
+  margin-bottom: 10px;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form button {
+  margin-bottom: 10px;
+}
